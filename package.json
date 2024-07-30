@@ -1,6 +1,8 @@
 {
   "name": "mydroptest",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "A customizable React Select component.",
+  "main": "dist/index.js",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -42,6 +44,19 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "postcss-loader": "^5.0.0"
+  },
+  "author": "Ardian Septiadi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AradeaTechno/arditester.git"
   }
 }
