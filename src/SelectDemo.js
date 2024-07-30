@@ -9,11 +9,8 @@ const SelectDemo = () => {
 
   const options = [
     { value: '1', label: 'Option 1' },
-    { value: '2', label: 'Option with icon' },
-    { value: '3', label: 'Long Long Option 3' },
-    { value: '4', label: 'Long Long Long Option 4' },
-    { value: '5', label: 'Long Long Long Long Option 5' },
-    { value: '6', label: 'Long Long Long Long Long Option 6' },
+    { value: '2', label: 'Option 2' },
+    { value: '3', label: 'Option 3' },
   ];
 
   return (

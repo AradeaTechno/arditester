@@ -86,7 +86,7 @@ const Select = ({
         <div
           key={option.value}
           className={`
-            cursor-pointer p-2 hover:bg-gray-100 text-sm
+            cursor-pointer p-2 hover:bg-gray-100 text-xs
             ${!isMatch ? 'text-black-400' : ''}
             ${isSelected ? 'bg-green-200 bg-opacity-70' : ''}
           `}
@@ -111,7 +111,7 @@ const Select = ({
         <div className="relative">
           <input
             type="text"
-            className="p-2 border-b border-gray-300 pl-8 outline-none w-full text-sm"
+            className="p-2 border-b border-gray-300 pl-8 outline-none w-full text-xs"
             placeholder={searchPlaceholder}
             value={searchQuery}
             onChange={handleSearchChange}
@@ -144,10 +144,10 @@ const Select = ({
   const selectedLabel = multiple
     ? selectedOptions.length > 0
       ? selectedOptions.map((option) => (
-          <div key={option.value} className="inline-flex items-center pl-3 pr-3 pt-1 pb-1 ml-2 bg-gray-100 rounded-full">
-            <span className="ml-2 mr-2 text-sm">{option.label}</span>
+          <div key={option.value} className="inline-flex items-center pl-3 pr-3 pt-1 pb-1 ml-2 bg-gray-100 rounded-full text-sm">
+            <span className="mr-2">{option.label}</span>
             <button
-              className="text-black border border-black rounded-lg w-4 h-4 flex items-center justify-center"
+              className="text-black border border-black rounded-lg w-3 h-3 flex items-center justify-center"
               onClick={(e) => {
                 e.stopPropagation();
                 removeOption(option);
@@ -159,18 +159,17 @@ const Select = ({
         ))
       : ''
     : selectedOptions.length > 0
-    ? (<span className="ml-2 text-sm">{selectedOptions[0].label}</span>)
+    ? (<span className="ml-2">{selectedOptions[0].label}</span>)
     : '';
 
   return (
     <div className="flex items-center">
-      <label htmlFor={id} className="mr-4 text-sm">{label}</label>
+      <label htmlFor={id} className="mr-4 text-xs">{label}</label>
       <div className="relative inline-block w-full" ref={selectRef}>
         <div
-          className={`cursor-pointer border border-gray-300 rounded-md p-1 bg-white flex items-center justify-between ${outlined ? 'bg-gray-300 cursor-not-allowed' : ''}`}
+          className={`cursor-pointer border border-gray-300 rounded-md min-h-[27pt] bg-white flex items-center justify-between ${outlined ? 'bg-gray-300 cursor-not-allowed' : ''}`}
           onClick={toggleOpen}
           id={id}
-          style={{ minHeight: '40px', maxHeight: '40px' }}
         >
           <span>{selectedLabel}</span>
           <svg
